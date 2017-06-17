@@ -1,0 +1,46 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet"> {% block css %}{% endblock css %}
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <span class="depart">ООО МБС УССАиУС ОСиСА ММКИ</span>
+            <span class="phone">(0629)56-55-61</span>
+        </div>
+        <div class="header-width">
+            <img class="logo" src="{% static 'img/metinvest.svg' %}" alt="metinvest">
+            <div class="bottom-header">
+                <a href="{% url 'dashboard:dashboard' %}">события системы</a>
+                <a href="#">база знаний</a>
+                <a href="/">главная</a>
+            </div>
+        </div>
+    </header>
+    <content>
+        <!--<div class="ws-monitor">
+            <h1>Дневной отчет</h1>
+            <ul>
+                <li>Новых компьютеров обнаружено: </li>
+                <li>Всего событий собрано:</li>
+                <li>Критических:</li>
+                <li>Ошибок:</li>
+                <li>Предупреждений:</li>
+            </ul>
+        </div>
+        <div class="knowledge-db">
+            <h1>Последние записи</h1>
+        </div>-->
+        {% block content %} {% endblock content %}
+    </content>
+</body>
+
+</html>

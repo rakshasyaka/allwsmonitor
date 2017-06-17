@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% load staticfiles %} {% block css %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet"> {% endblock css %} {% block content %}
+<div class="ws-monitor">
+    <h1>Дневной отчет</h1>
+    <ul>
+        <li>Новых компьютеров обнаружено: </li>
+        <li>Всего событий собрано:</li>
+        <li>Критических:</li>
+        <li>Ошибок:</li>
+        <li>Предупреждений:</li>
+    </ul>
+</div>
+<div class="knowledge-db">
+    <h1>Последние записи</h1>
+</div>
+{% endblock content %}

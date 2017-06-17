@@ -1,0 +1,36 @@
+.ws-monitor {
+    /*background: lightcyan;*/
+    /*display: inline-block;*/
+    float: left;
+    max-width: 49.7%;
+    min-width: 49.7%;
+    border-right: 2px solid #555;
+    border-bottom: 1px solid #555;
+    box-shadow: -1px 10px 10px #555;
+}
+
+.ws-monitor ul {
+    text-decoration: underline;
+    list-style: none;
+    line-height: 2em;
+}
+
+.ws-monitor h1 {
+    text-align: center;
+}
+
+.knowledge-db {
+    /*background: lightgreen;*/
+    /*display: inline-block;*/
+    float: right;
+    max-width: 49.7%;
+    min-width: 49.7%;
+    text-align: center;
+    border-left: 2px solid #555;
+    border-bottom: 1px solid #555;
+    box-shadow: 1px 10px 10px #555;
+}
+
+.knowledge-db h1 {
+    text-align: center;
+}
