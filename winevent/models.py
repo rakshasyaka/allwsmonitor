@@ -6,6 +6,7 @@ class Computer(models.Model):
     """Computers for monitoring"""
     name = models.CharField(max_length=16)
     opersys = models.CharField(max_length=16, blank=True, default=None)
+    wmi_warning = models.BooleanField(default=False)
     client_version = models.IntegerField()
     create = models.DateTimeField(auto_now_add=True, auto_now=False)
     update = models.DateTimeField(
@@ -31,12 +32,15 @@ class WinEvent(models.Model):
     # current logged user
     user = models.CharField(max_length=32, blank=True)
     # to delete not neccessary property
-    opcode = models.CharField(max_length=16, blank=True)
+    #opcode = models.CharField(max_length=16, blank=True)
     # message
     description = models.TextField(blank=True)
-    logged = models.DateTimeField()
-    task_category = models.CharField(max_length=16, blank=True)
-    keywords = models.CharField(max_length=16, blank=True)
+    #logged = models.DateTimeField()
+    # to delete not neccessary property
+    #task_category = models.CharField(max_length=16, blank=True)
+    # to delete not neccessary property
+    #keywords = models.CharField(max_length=16, blank=True)
+    
     computer = models.ForeignKey(Computer, on_delete=models.CASCADE)
     create = models.DateTimeField(auto_now_add=True, auto_now=False)
     update = models.DateTimeField(
